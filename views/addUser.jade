@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title="Register"
+  body
+    div
+      h1 Add User
+      form(method='POST',action='/adduser')
+        #form-group
+          label Name:
+          input.form-control(name='name',type='text')
+          br
+          br
+        #form-group
+          label Age:
+          input.form-control(name='age',type='text')
+          br
+          br
+        #form-group
+          input.btn.btn-primary(type='submit',value='Submit')

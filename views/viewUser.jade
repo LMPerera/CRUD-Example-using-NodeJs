@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title="View User"
+  body
+    div
+      h1 Users
+      table(style="width:40%",border="1")
+        thead
+          tr
+            th Name
+            th Age
+            th Actions
+        tbody(style="text-align:center")
+          each user, i in users
+            tr
+              td=user.name
+              td=user.age
+              td
+                a.btn.btn-primary(href='/edituser/'+user._id) Edit
+                br
+                a.btn.btn-primary(href='/deleteuser/'+user._id) Delete
